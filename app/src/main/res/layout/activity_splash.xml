@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B2435"
+    tools:context=".Splash">
+
+    <ImageView
+        android:id="@+id/AppLogoHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="234dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/unitconverterlogo"
+        tools:ignore="ContentDescription" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AppNameHolder"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+        <TextView
+            android:id="@+id/U"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/inter_bold"
+            android:text="U"
+            android:textAlignment="center"
+            android:textColor="#FAB120"
+            android:textSize="36sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="n"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="36sp"
+            android:id="@+id/n"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/U"
+            android:textColor="#F45468"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/n"
+            android:text="i"
+            android:fontFamily="@font/inter_bold"
+            android:layout_marginStart="2dp"
+            android:layout_centerVertical="true"
+            android:textColor="#8CDE2A"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:id="@+id/i"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="t"
+            android:fontFamily="@font/inter_bold"
+            android:layout_marginStart="2dp"
+            android:id="@+id/t"
+            android:textColor="#7376FF"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:textSize="36sp"
+            android:layout_toEndOf="@+id/i"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/t"
+            android:layout_marginStart="10dp"
+            android:text="Converter"
+            android:fontFamily="@font/inter_bold"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:textSize="36sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

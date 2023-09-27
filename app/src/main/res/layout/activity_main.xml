@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#1B2435"
+    android:paddingStart="10dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="RtlSymmetry">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        tools:ignore="SpeakableTextPresentCheck,UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/firstRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:id="@+id/TimeContainer"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/timeConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ClockTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/clock_1"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Time"
+                        android:id="@+id/TimeText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LengthContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/LengthConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/RulerLength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/length_1"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Length"
+                        android:id="@+id/LengthText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/AreaContainer"
+                    android:gravity="end|center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/AreaConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/SquareArea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="10dp"
+                            android:paddingEnd="-10dp"
+                            android:paddingBottom="15dp"
+                            android:src="@drawable/area_1"
+                            tools:ignore="ContentDescription,RtlSymmetry" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Area"
+                        android:id="@+id/AreaText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondRow"
+                android:layout_below="@+id/firstRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/WeightContianer"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/weightConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/DumbBell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/weight_2"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Weight"
+                        android:id="@+id/WeightText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/PressureContainer"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/PressureConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/TyrePressure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/pressure_1"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Pressure"
+                        android:id="@+id/PressureText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/PowerContainer"
+                    android:gravity="end|center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/PowerConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/BulbPower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/bulb_1"
+                            tools:ignore="ContentDescription,RtlSymmetry" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Power"
+                        android:id="@+id/PowerText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondRow"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start"
+                    android:id="@+id/EnergyContainer"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/EnergyConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/BatteryEnergy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:padding="5dp"
+                            android:src="@drawable/energy_storage_1"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Energy"
+                        android:id="@+id/EnergyText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/SpeedContainer"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/SpeedConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/SpeedometerSpeed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/speedometer_1"
+                            tools:ignore="ContentDescription,RtlSymmetry" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Speed"
+                        android:id="@+id/SpeedText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:id="@+id/StorageContainer"
+                    android:layout_marginStart="15dp"
+                    android:gravity="end|center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/StorageConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/StorageChip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/chip_1"
+                            tools:ignore="ContentDescription,RtlSymmetry" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Storage"
+                        android:id="@+id/StorageText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourthRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thirdRow"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/TemperatureContainer"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/TemperatureConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ThermometerTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="2dp"
+                            android:src="@drawable/thermometer_1"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Temperature"
+                        android:id="@+id/TemperatureText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20dp"
+                    android:id="@+id/VolumeContainer"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/VolumeConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/CubeVolume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="2dp"
+                            android:src="@drawable/_dcube_1"
+                            tools:ignore="ContentDescription" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Volume"
+                        android:id="@+id/VolumeText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/AngleContainer"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/AngleConverter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ellipse_4"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/AngleRadian"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/angle_1"
+                            tools:ignore="ContentDescription,RtlSymmetry" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/inter"
+                        android:text="Angle"
+                        android:id="@+id/AngleText"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

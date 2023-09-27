@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B2435"
+    tools:context=".Converter">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/left_arrow_1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/TextLabelled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/inter_bold"
+            android:text="Length"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/params1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <RelativeLayout
+            android:id="@+id/converterParams1"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/rectangle_1">
+
+            <TextView
+                android:id="@+id/FirstConv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:paddingEnd="10dp"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@+id/converterParams1"
+            android:background="@drawable/rectangle_2">
+
+            <Spinner
+                android:id="@+id/FromUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rectangle_2"
+                android:textAlignment="center"
+                android:spinnerMode="dropdown"
+                tools:ignore="DuplicateSpeakableTextCheck">
+
+            </Spinner>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/params2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/params1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <RelativeLayout
+            android:id="@+id/converterParams2"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:background="@drawable/rectangle_1">
+
+            <TextView
+                android:id="@+id/SecondConv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/inter"
+                android:paddingEnd="10dp"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toEndOf="@+id/converterParams2"
+            android:background="@drawable/rectangle_2">
+
+            <Spinner
+                android:id="@+id/ToUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rectangle_2"
+                android:textAlignment="center"></Spinner>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/unitConverterData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/params2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:id="@+id/textContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/FromText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="46dp"
+                android:fontFamily="@font/inter"
+                android:padding="5dp"
+                android:text="100 cm = 1m"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TextCopy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textContainer"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="46dp"
+            android:fontFamily="@font/inter_bold"
+            android:padding="5sp"
+            android:text="Copy text"
+            android:textColor="#428BC1"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@android:color/transparent"
+        android:gravity="bottom">
+
+        <View
+            android:id="@+id/separatorLine"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rectangle_1" />
+
+        <LinearLayout
+            android:id="@+id/firstRowNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separatorLine"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/SevenHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/inter_bold"
+                android:padding="5dp"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/EightHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/NineHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondRowNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstRowNum"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/FourHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="29dp"
+                android:fontFamily="@font/inter_bold"
+                android:padding="5dp"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/FiveHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/SixHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdRowNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondRowNum"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/OneHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/inter_bold"
+                android:padding="5dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/TwoHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="65dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/ThreeHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="60dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/firstRowNum"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="AC"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/ZeroHolder"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdRowNum"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/PointHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdRowNum"
+            android:layout_marginStart="-44dp"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@+id/ZeroHolder"
+            android:fontFamily="@font/inter_bold"
+            android:text="."
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/BackSpaceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ClearButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/thirdRowNum"
+            android:background="#1B2435"
+            android:src="@drawable/back"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
